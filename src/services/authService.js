@@ -61,18 +61,23 @@ export function initAuthListener() {
     return () => {};
   }
 
-  const { data: { subscription } } = supabase.auth.onAuthStateChange(
-    (event, session) => {
-      const store = useAuthStore.getState();
-      if (session) {
-        store.setUser(session.user);
-        store.setSession(session);
-      } else {
-        store.clear();
+  try {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        const store = useAuthStore.getState();
+        if (session) {
+          store.setUser(session.user);
+          store.setSession(session);
+        } else {
+          store.clear();
+        }
+        store.setLoading(false);
       }
-      store.setLoading(false);
-    }
-  );
-
-  return () => subscription.unsubscribe();
+    );
+    return () => subscription.unsubscribe();
+  } catch (e) {
+    console.warn('Auth listener failed:', e);
+    useAuthStore.getState().setLoading(false);
+    return () => {};
+  }
 }
