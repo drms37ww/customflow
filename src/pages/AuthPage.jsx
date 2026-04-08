@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../hooks/useAuth';
@@ -16,15 +16,10 @@ export default function AuthPage() {
   const { isAuthenticated, isLoading } = useAuth();
   const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
-  const [view, setView] = useState('login');
 
-  // Detect recovery/reset token in URL hash (Supabase redirects with #access_token=...&type=recovery)
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash && hash.includes('type=recovery')) {
-      setView('reset');
-    }
-  }, []);
+  // Detect recovery token synchronously before first render
+  const isRecovery = window.location.hash.includes('type=recovery');
+  const [view, setView] = useState(isRecovery ? 'reset' : 'login');
 
   if (isLoading) {
     return (
