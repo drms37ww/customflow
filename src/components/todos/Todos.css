@@ -1,0 +1,283 @@
+/* Todo Tabs */
+.todo-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border-light);
+  overflow-x: auto;
+}
+
+.todo-tab {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.todo-tab:hover {
+  color: var(--color-text);
+}
+
+.todo-tab--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.todo-tab--add {
+  color: var(--color-text-tertiary);
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.todo-item:hover {
+  background: var(--color-bg-secondary);
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.todo-checkbox:hover {
+  border-color: var(--color-accent);
+}
+
+.todo-checkbox--checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.todo-checkbox--priority-4 { border-color: var(--color-priority-urgent); }
+.todo-checkbox--priority-3 { border-color: var(--color-priority-high); }
+.todo-checkbox--priority-2 { border-color: var(--color-priority-medium); }
+.todo-checkbox--priority-1 { border-color: var(--color-priority-low); }
+
+.todo-item-body {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.todo-item-name {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.todo-item-name--completed {
+  text-decoration: line-through;
+  color: var(--color-text-tertiary);
+}
+
+.todo-item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+
+.todo-item-due {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.todo-item-due--overdue {
+  color: var(--color-error);
+}
+
+.todo-item-priority {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.todo-item-priority--4 { background: rgba(220,38,38,0.1); color: var(--color-priority-urgent); }
+.todo-item-priority--3 { background: rgba(234,88,12,0.1); color: var(--color-priority-high); }
+.todo-item-priority--2 { background: rgba(202,138,4,0.1); color: var(--color-priority-medium); }
+.todo-item-priority--1 { background: rgba(101,163,13,0.1); color: var(--color-priority-low); }
+
+.todo-item-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.todo-item:hover .todo-item-actions {
+  opacity: 1;
+}
+
+.todo-star {
+  color: var(--color-text-tertiary);
+  padding: 2px;
+}
+
+.todo-star--active {
+  color: #eab308;
+}
+
+.todo-expand-btn {
+  color: var(--color-text-tertiary);
+  padding: 2px;
+  font-size: var(--font-size-xs);
+}
+
+/* Subtasks */
+.subtask-list {
+  padding-left: var(--space-lg);
+  border-left: 2px solid var(--color-border-light);
+  margin-left: 10px;
+}
+
+/* Completed group */
+.completed-group {
+  margin-top: var(--space-lg);
+}
+
+.completed-group-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+}
+
+.completed-group-header:hover {
+  background: var(--color-bg-secondary);
+}
+
+/* Todo Detail panel */
+.todo-detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.todo-detail {
+  background: var(--color-surface);
+  width: 90%;
+  max-width: 500px;
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.todo-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.todo-detail-field label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.todo-detail-field input,
+.todo-detail-field textarea,
+.todo-detail-field select {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.todo-detail-field input:focus,
+.todo-detail-field textarea:focus,
+.todo-detail-field select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-bg);
+}
+
+.todo-detail-field textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: var(--font-family);
+}
+
+.todo-detail-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.todo-detail-row > * {
+  flex: 1;
+}
+
+/* New task input */
+.new-task-input {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.new-task-input input {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+
+.new-task-input input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-bg);
+}
+
+.new-task-input button {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}

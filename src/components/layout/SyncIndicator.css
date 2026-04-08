@@ -1,0 +1,33 @@
+.sync-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+}
+
+.sync-indicator--offline {
+  color: var(--color-text-tertiary);
+}
+
+.sync-indicator--syncing {
+  color: var(--color-accent);
+}
+
+.sync-indicator--pending {
+  color: var(--color-warning);
+}
+
+.sync-badge {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.sync-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

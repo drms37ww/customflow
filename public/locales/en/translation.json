@@ -1,0 +1,234 @@
+{
+  "app": {
+    "name": "customFlow"
+  },
+  "nav": {
+    "flashcards": "Flashcards",
+    "todos": "Todos",
+    "calendar": "Calendar",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "verifyEmail": "Verify Your Email",
+    "verifyEmailMessage": "We sent a verification link to your email. Please check your inbox.",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginError": "Invalid email or password",
+    "signupError": "Could not create account",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "name": "Name",
+    "description": "Description",
+    "date": "Date",
+    "time": "Time",
+    "none": "None",
+    "all": "All",
+    "loading": "Loading...",
+    "noResults": "No results",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "labels": "Labels",
+    "priority": "Priority",
+    "star": "Star",
+    "unstar": "Unstar"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "flashcards": {
+    "title": "Flashcards",
+    "newFolder": "New Folder",
+    "newDeck": "New Deck",
+    "newCard": "New Card",
+    "folders": "Folders",
+    "decks": "Decks",
+    "cards": "Cards",
+    "study": "Study",
+    "studyFolder": "Study Folder",
+    "starred": "Starred",
+    "front": "Front",
+    "back": "Back",
+    "displayMode": "Display Mode",
+    "frontFirst": "Front First",
+    "backFirst": "Back First",
+    "bothSides": "Both Sides",
+    "random": "Random",
+    "noCardsToStudy": "No cards to study right now",
+    "rating": {
+      "again": "Again",
+      "hard": "Hard",
+      "good": "Good",
+      "easy": "Easy"
+    },
+    "emptyFolder": "This folder is empty",
+    "emptyDeck": "This deck has no cards"
+  },
+  "todos": {
+    "title": "Todos",
+    "newTask": "New Task",
+    "newSubtask": "New Subtask",
+    "dueDate": "Due Date",
+    "dueTime": "Due Time",
+    "completed": "Completed",
+    "incomplete": "Incomplete",
+    "restore": "Restore",
+    "tabs": {
+      "default": "All",
+      "starred": "Starred",
+      "newTab": "New Tab"
+    },
+    "priority": {
+      "none": "None",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "recurrence": {
+      "title": "Recurrence",
+      "interval": "Interval",
+      "pattern": "Pattern",
+      "customDates": "Custom Dates",
+      "every": "Every",
+      "days": "days",
+      "weeks": "weeks",
+      "months": "months",
+      "years": "years"
+    },
+    "reminders": {
+      "title": "Reminders",
+      "addReminder": "Add Reminder",
+      "offset": "Before due",
+      "exact": "Exact time",
+      "minutes": "minutes",
+      "hours": "hours",
+      "atTime": "at"
+    },
+    "attachments": "Attachments",
+    "urlLinks": "Links",
+    "linkedDeck": "Linked Deck",
+    "noTasks": "No tasks yet"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "today": "Today",
+    "newEvent": "New Event",
+    "views": {
+      "year": "Year",
+      "month": "Month",
+      "threeWeek": "3 Weeks",
+      "week": "Week",
+      "threeDay": "3 Days",
+      "custom": "Custom"
+    },
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "allDay": "All Day",
+    "noEvents": "No events"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": {
+      "title": "Account",
+      "changeEmail": "Change Email",
+      "changePassword": "Change Password",
+      "deleteAccount": "Delete Account",
+      "deleteAccountConfirm": "Are you sure? This action cannot be undone."
+    },
+    "notifications": {
+      "title": "Notifications",
+      "pushEnabled": "Push Notifications",
+      "emailEnabled": "Email Notifications",
+      "testNotification": "Send Test Notification"
+    },
+    "sync": {
+      "title": "Sync",
+      "lastSync": "Last synced",
+      "syncNow": "Sync Now",
+      "syncing": "Syncing...",
+      "clearLocal": "Clear Local Data"
+    },
+    "display": {
+      "title": "Display",
+      "theme": "Theme",
+      "language": "Language",
+      "en": "English",
+      "ja": "Japanese"
+    },
+    "calendarSettings": {
+      "title": "Calendar",
+      "defaultView": "Default View",
+      "weekStart": "Week Starts On",
+      "dayNameFormat": "Day Name Format",
+      "fullName": "Full Name",
+      "abbreviated": "Abbreviated"
+    },
+    "flashcardSettings": {
+      "title": "Flashcards",
+      "requestRetention": "Target Retention",
+      "maximumInterval": "Maximum Interval (days)",
+      "enableFuzz": "Enable Fuzz"
+    },
+    "data": {
+      "title": "Data",
+      "export": "Export Data",
+      "import": "Import Data",
+      "storageUsed": "Storage Used",
+      "exportDescription": "Download all your data as a ZIP file",
+      "importDescription": "Import data from a previously exported ZIP file"
+    }
+  },
+  "days": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "app": {
+    "name": "customFlow"
+  },
+  "nav": {
+    "flashcards": "フラッシュカード",
+    "todos": "タスク",
+    "calendar": "カレンダー",
+    "settings": "設定"
+  },
+  "auth": {
+    "login": "ログイン",
+    "signup": "新規登録",
+    "logout": "ログアウト",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワード確認",
+    "forgotPassword": "パスワードを忘れた方",
+    "resetPassword": "パスワードリセット",
+    "verifyEmail": "メールアドレスを確認",
+    "verifyEmailMessage": "確認リンクをメールで送信しました。受信トレイを確認してください。",
+    "noAccount": "アカウントをお持ちでない方",
+    "hasAccount": "既にアカウントをお持ちの方",
+    "loginError": "メールアドレスまたはパスワードが無効です",
+    "signupError": "アカウントを作成できませんでした",
+    "passwordMismatch": "パスワードが一致しません"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "create": "作成",
+    "add": "追加",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並べ替え",
+    "name": "名前",
+    "description": "説明",
+    "date": "日付",
+    "time": "時間",
+    "none": "なし",
+    "all": "すべて",
+    "loading": "読み込み中...",
+    "noResults": "結果なし",
+    "confirm": "確認",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "done": "完了",
+    "labels": "ラベル",
+    "priority": "優先度",
+    "star": "スター",
+    "unstar": "スター解除"
+  },
+  "theme": {
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "flashcards": {
+    "title": "フラッシュカード",
+    "newFolder": "新しいフォルダ",
+    "newDeck": "新しいデッキ",
+    "newCard": "新しいカード",
+    "folders": "フォルダ",
+    "decks": "デッキ",
+    "cards": "カード",
+    "study": "学習",
+    "studyFolder": "フォルダを学習",
+    "starred": "スター付き",
+    "front": "表面",
+    "back": "裏面",
+    "displayMode": "表示モード",
+    "frontFirst": "表面から",
+    "backFirst": "裏面から",
+    "bothSides": "両面表示",
+    "random": "ランダム",
+    "noCardsToStudy": "現在学習するカードはありません",
+    "rating": {
+      "again": "もう一度",
+      "hard": "難しい",
+      "good": "普通",
+      "easy": "簡単"
+    },
+    "emptyFolder": "このフォルダは空です",
+    "emptyDeck": "このデッキにはカードがありません"
+  },
+  "todos": {
+    "title": "タスク",
+    "newTask": "新しいタスク",
+    "newSubtask": "新しいサブタスク",
+    "dueDate": "期限日",
+    "dueTime": "期限時間",
+    "completed": "完了済み",
+    "incomplete": "未完了",
+    "restore": "復元",
+    "tabs": {
+      "default": "すべて",
+      "starred": "スター付き",
+      "newTab": "新しいタブ"
+    },
+    "priority": {
+      "none": "なし",
+      "low": "低",
+      "medium": "中",
+      "high": "高",
+      "urgent": "緊急"
+    },
+    "recurrence": {
+      "title": "繰り返し",
+      "interval": "間隔",
+      "pattern": "パターン",
+      "customDates": "カスタム日付",
+      "every": "毎",
+      "days": "日",
+      "weeks": "週",
+      "months": "月",
+      "years": "年"
+    },
+    "reminders": {
+      "title": "リマインダー",
+      "addReminder": "リマインダーを追加",
+      "offset": "期限前",
+      "exact": "指定時刻",
+      "minutes": "分",
+      "hours": "時間",
+      "atTime": "に"
+    },
+    "attachments": "添付ファイル",
+    "urlLinks": "リンク",
+    "linkedDeck": "リンクされたデッキ",
+    "noTasks": "タスクはまだありません"
+  },
+  "calendar": {
+    "title": "カレンダー",
+    "today": "今日",
+    "newEvent": "新しいイベント",
+    "views": {
+      "year": "年",
+      "month": "月",
+      "threeWeek": "3週間",
+      "week": "週",
+      "threeDay": "3日間",
+      "custom": "カスタム"
+    },
+    "startTime": "開始時間",
+    "endTime": "終了時間",
+    "allDay": "終日",
+    "noEvents": "イベントなし"
+  },
+  "settings": {
+    "title": "設定",
+    "account": {
+      "title": "アカウント",
+      "changeEmail": "メールアドレス変更",
+      "changePassword": "パスワード変更",
+      "deleteAccount": "アカウント削除",
+      "deleteAccountConfirm": "本当に削除しますか？この操作は取り消せません。"
+    },
+    "notifications": {
+      "title": "通知",
+      "pushEnabled": "プッシュ通知",
+      "emailEnabled": "メール通知",
+      "testNotification": "テスト通知を送信"
+    },
+    "sync": {
+      "title": "同期",
+      "lastSync": "最終同期",
+      "syncNow": "今すぐ同期",
+      "syncing": "同期中...",
+      "clearLocal": "ローカルデータを削除"
+    },
+    "display": {
+      "title": "表示",
+      "theme": "テーマ",
+      "language": "言語",
+      "en": "英語",
+      "ja": "日本語"
+    },
+    "calendarSettings": {
+      "title": "カレンダー",
+      "defaultView": "デフォルト表示",
+      "weekStart": "週の開始曜日",
+      "dayNameFormat": "曜日の表示形式",
+      "fullName": "フルネーム",
+      "abbreviated": "省略形"
+    },
+    "flashcardSettings": {
+      "title": "フラッシュカード",
+      "requestRetention": "目標保持率",
+      "maximumInterval": "最大間隔（日）",
+      "enableFuzz": "ファズを有効化"
+    },
+    "data": {
+      "title": "データ",
+      "export": "データをエクスポート",
+      "import": "データをインポート",
+      "storageUsed": "使用ストレージ",
+      "exportDescription": "すべてのデータをZIPファイルとしてダウンロード",
+      "importDescription": "以前エクスポートしたZIPファイルからデータをインポート"
+    }
+  },
+  "days": {
+    "monday": "月曜日",
+    "tuesday": "火曜日",
+    "wednesday": "水曜日",
+    "thursday": "木曜日",
+    "friday": "金曜日",
+    "saturday": "土曜日",
+    "sunday": "日曜日",
+    "mon": "月",
+    "tue": "火",
+    "wed": "水",
+    "thu": "木",
+    "fri": "金",
+    "sat": "土",
+    "sun": "日"
+  },
+  "months": {
+    "january": "1月",
+    "february": "2月",
+    "march": "3月",
+    "april": "4月",
+    "may": "5月",
+    "june": "6月",
+    "july": "7月",
+    "august": "8月",
+    "september": "9月",
+    "october": "10月",
+    "november": "11月",
+    "december": "12月"
+  }
+}
