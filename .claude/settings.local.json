@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:quizlet.com)",
+      "WebFetch(domain:help.quizlet.com)",
+      "WebFetch(domain:support.google.com)",
+      "mcp__ide__getDiagnostics",
+      "WebFetch(domain:www.wolframalpha.com)"
+    ]
+  }
+}
