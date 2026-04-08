@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../hooks/useAuth';
 import { useTheme } from '../hooks/useTheme';
@@ -7,6 +7,7 @@ import LoginForm from '../components/auth/LoginForm';
 import RegisterForm from '../components/auth/RegisterForm';
 import ForgotPasswordForm from '../components/auth/ForgotPasswordForm';
 import EmailVerification from '../components/auth/EmailVerification';
+import ResetPasswordForm from '../components/auth/ResetPasswordForm';
 import { Sun, Moon, Monitor, Globe } from 'lucide-react';
 import './PageStyles.css';
 
@@ -14,7 +15,16 @@ export default function AuthPage() {
   const { t, i18n } = useTranslation();
   const { isAuthenticated, isLoading } = useAuth();
   const { theme, setTheme } = useTheme();
-  const [view, setView] = useState('login'); // login | signup | forgot | verify
+  const navigate = useNavigate();
+  const [view, setView] = useState('login');
+
+  // Detect recovery/reset token in URL hash (Supabase redirects with #access_token=...&type=recovery)
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash && hash.includes('type=recovery')) {
+      setView('reset');
+    }
+  }, []);
 
   if (isLoading) {
     return (
@@ -28,7 +38,8 @@ export default function AuthPage() {
     );
   }
 
-  if (isAuthenticated) {
+  // If authenticated but NOT resetting password, go to app
+  if (isAuthenticated && view !== 'reset') {
     return <Navigate to="/todos" replace />;
   }
 
@@ -61,6 +72,7 @@ export default function AuthPage() {
           {view === 'signup' && t('auth.signup')}
           {view === 'forgot' && t('auth.resetPassword')}
           {view === 'verify' && t('auth.verifyEmail')}
+          {view === 'reset' && t('auth.resetPassword')}
         </p>
         {view === 'login' && (
           <LoginForm
@@ -79,6 +91,9 @@ export default function AuthPage() {
         )}
         {view === 'verify' && (
           <EmailVerification onSwitchToLogin={() => setView('login')} />
+        )}
+        {view === 'reset' && (
+          <ResetPasswordForm onDone={() => navigate('/todos')} />
         )}
       </div>
     </div>
